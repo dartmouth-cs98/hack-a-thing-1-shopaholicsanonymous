@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "ShopaholicsAnonymous",
+    "version": "1.2",
+    "description": "Reduces impulse shopping my redirecting buying to bank website",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+      "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "js": ["jquery-3.4.1.js", "function.js"]
+        }
+      ],
+      "permissions": [
+        "tabs"
+      ],
+      "browser_action": {
+        "default_icon": "noshop.png",
+        "default_popup": "popup.html"
+      }
+    }
