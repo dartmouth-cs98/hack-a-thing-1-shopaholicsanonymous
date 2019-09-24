@@ -3,7 +3,25 @@
 //has all the listeners important to extension
 //dormant until event is fired"
 
-chrome.browserAction.onClicked.addListener(function(tab) {
+
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) 
+{
+
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        console.log(tabs);
+        var url = tabs[0].url;
+        var suspect = ['uniqlo.com', 'www.amazon.com', 'https://www.urbanoutfitters.com', 'https://www.sephora.com'];
+        for (store in suspect){
+            if (url===suspect){
+                alert("Please use your savings extension to come to your senses.");
+            }
+        }
+    })
+    
+});
+  
+
+chrome.browserAction.onClicked.addListener(function(tab) {s
   // Send a message to the active tab
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     var activeTab = tabs[0];
