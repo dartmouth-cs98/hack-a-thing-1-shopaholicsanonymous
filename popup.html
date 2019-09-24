@@ -1,0 +1,81 @@
+<!-- <!DOCTYPE html><html><head><title>Pop Up</title></head><body>
+    <form>
+            <input type="radio" name="choice" value="save" checked>Save Money<br>
+            <input type="radio" name="choice" value="spend">Spend :(<br>
+            <input type="submit" value="Go!">
+    </form>
+            <script src="popup.js"></script>
+</body></html> -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        html{
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            background-image: url("terry.png");
+            border-radius: 25px;
+            z-index: 0;
+        }
+
+      body{
+          height: 280px;
+          width: 380px;
+          background-color: white;
+          opacity: 0.75;
+          z-index: 1;
+          
+      }
+
+        h1{
+            color: #FF0000;
+            align-items: center;
+            border: 5px solid red;
+
+        }
+
+        h2, h3 {
+        text-decoration: underline;
+        text-decoration-color: red;
+        }
+
+        ol{
+            text-align: left;
+            font-size: 16px;
+        }
+
+
+        button {
+        height: 50px;
+        width: 200px;
+        outline: black;
+        background-color: rgb(254, 254, 254);
+        border: 2px solid red;
+        font-size: 25px;
+        border-radius: 2px;
+        }
+
+        button:hover {
+            background-color: rgb(255, 0, 0);
+            color: white;
+            }
+
+    </style>
+  </head>
+  <body>
+    <h1>STOP RIGHT THERE</h1>
+    <h2>Are you sure you want to be spending money?</h2>
+    <h3>Current Saving Goals</h3>
+    <ol>
+            <li>Save up for car</li>
+            <li>Increase Emergency Savings</li>
+            <li>Save up for Asia Trip</li>
+    </ol>
+    <button id="saving">Save</button>
+    <script type="text/javascript" src="popup.js"></script>
+  </body>
+  
+</html>
